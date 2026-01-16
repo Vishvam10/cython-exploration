@@ -17,21 +17,6 @@ cdef class Matrix :
         if self.data != NULL :
             free(self.data)
     
-
-    def __getitem__(self, idx):
-        cdef Py_ssize_t i, j
-        i, j = idx
-        if i < 0 or i >= self.rows or j < 0 or j >= self.cols:
-            raise IndexError()
-        return self.data[i * self.cols + j]
-
-    def __setitem__(self, idx, double value):
-        cdef Py_ssize_t i, j
-        i, j = idx
-        if i < 0 or i >= self.rows or j < 0 or j >= self.cols:
-            raise IndexError()
-        self.data[i * self.cols + j] = value
-
     def __str__(self):
         cdef Py_ssize_t i, j
         lines = []
