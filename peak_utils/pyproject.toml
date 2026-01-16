@@ -1,7 +1,7 @@
 [project]
 name = "peak-utils"
 version = "0.1.0"
-description = "Add your description here"
+description = "A lightweight experimental matrix library built with Cython to explore how C/Python interops, build systems, and performance tuning"
 readme = "README.md"
 authors = [
     { name = "Vishvam10", email = "s.vishvam1025@gmail.com" }
